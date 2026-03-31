@@ -3,7 +3,7 @@ services:
   jenkins:
     build: .
     environment:
-      - Jigglypuff_PASSWORD=${Jigglypuff_PASSWORD}
+      - PASSWORD=${Jigglypuff_PASSWORD}
     volumes:
       - jenkins_data:/var/jenkins_home
       - ./configuration.yml:/var/jenkins_home/casc_config/configuration.yml

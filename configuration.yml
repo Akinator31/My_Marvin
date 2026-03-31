@@ -12,7 +12,7 @@ jenkins:
       allowsSignup: false
       users:
         - id: "jigglypuff"
-          password: ${Jigglypuff_PASSWORD}
+          password: ${PASSWORD}
           name: "Jigglypuff"
           email: "tkt@tkt.com"
 
