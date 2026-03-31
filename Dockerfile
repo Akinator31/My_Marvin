@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:lts
 
-ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=true
+ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
 
 COPY --chown=jenkins:jenkins plugins.txt /var/jenkins_home/
 
