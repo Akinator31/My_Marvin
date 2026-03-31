@@ -1,12 +1,5 @@
 jenkins:
   systemMessage: "Hello! Welcome to my Jenkins instance :)"
-  globalNodeProperties:
-    - envVars:
-        env:
-          - key: VARIABLE1
-            value: foo
-          - key: VARIABLE2
-            value: bar
   securityRealm:
     local:
       allowsSignup: false
@@ -16,5 +9,5 @@ jenkins:
           name: "Jigglypuff"
           email: "tkt@tkt.com"
 
-  jobs:
-    - file: /var/jenkins_home/job_dsl.groovy
+jobs:
+  - file: /var/jenkins_home/job_dsl.groovy
