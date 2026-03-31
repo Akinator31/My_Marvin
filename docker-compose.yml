@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - jenkins_data:/var/jenkins_home
-      - ./configuration.yml:/var/jenkins_home/configuration.yml
+      - ./configuration.yml:/var/jenkins_home/casc_config/configuration.yml
       - ./job_dsl.yml:/var/jenkins_home/job_dsl.yml
       - /var/run/docker.sock:/var/run/docker.sock
 
