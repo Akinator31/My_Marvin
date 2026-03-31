@@ -6,10 +6,6 @@ services:
       - PASSWORD=${Jigglypuff_PASSWORD}
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/configuration.yml
     volumes:
-      - jenkins_data:/var/jenkins_home
       - ./configuration.yml:/var/jenkins_home/casc_configs/configuration.yml
       - ./job_dsl.groovy:/var/jenkins_home/job_dsl.groovy
       - /var/run/docker.sock:/var/run/docker.sock
-
-volumes:
-  jenkins_data:
