@@ -7,7 +7,6 @@ jenkins:
         - id: "jigglypuff"
           password: ${PASSWORD}
           name: "Jigglypuff"
-          email: "tkt@tkt.com"
 
 jobs:
   - file: /var/jenkins_home/job_dsl.groovy
