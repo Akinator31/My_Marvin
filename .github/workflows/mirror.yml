@@ -28,11 +28,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Dokploy Deployment
+      - name: Trigger Dokploy deploy
         run: |
-          curl -X POST "https://dokploy.pavel-dw.com/api/deploy/compose/q2bFyzeft8zxfD8mJsw18" \
+          curl -X POST \
+            'https://dokploy.pavel-dw.com/api/compose.deploy' \
+            -H 'accept: application/json' \
+            -H 'Content-Type: application/json' \
+            -H "x-api-key: ${{ secrets.DOKPLOY_API_KEY }}" \
             -H "CF-Access-Client-Id: ${{ secrets.CF_CLIENT_ID }}" \
-            -H "CF-Access-Client-Secret: ${{ secrets.CF_CLIENT_SECRET }}"
+            -H "CF-Access-Client-Secret: ${{ secrets.CF_CLIENT_SECRET }}" \
+            -d '{"composeId": "${{ secrets.DOKPLOY_COMP_ID }}"}'
 
   push_to_mirror:
     name: Push to a mirror repository
