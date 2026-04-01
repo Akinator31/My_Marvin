@@ -25,6 +25,15 @@ jobs:
           echo "You're trying to run workflow on the mirror repository !"
           exit 1
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Dokploy
+        run: |
+          curl -X POST "https://dokploy.pavel-dw.com/api/deploy/compose/q2bFyzeft8zxfD8mJsw18" \
+            -H "CF-Access-Client-Id: ${{ secrets.CF_CLIENT_ID }}" \
+            -H "CF-Access-Client-Secret: ${{ secrets.CF_CLIENT_SECRET }}"
+
   push_to_mirror:
     name: Push to a mirror repository
     if: ${{ github.ref_name == 'main' }}
