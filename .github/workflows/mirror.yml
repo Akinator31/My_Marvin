@@ -28,7 +28,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Dokploy
+      - name: Trigger Dokploy Deployment
         run: |
           curl -X POST "https://dokploy.pavel-dw.com/api/deploy/compose/q2bFyzeft8zxfD8mJsw18" \
             -H "CF-Access-Client-Id: ${{ secrets.CF_CLIENT_ID }}" \
