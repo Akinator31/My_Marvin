@@ -2,6 +2,9 @@ version: "3.8"
 services:
   jenkins:
     build: .
+    user: root
+    tmpfs:
+      - /var/jenkins_home
     environment:
       - USER_CHOCOLATEEN_PASSWORD=${USER_CHOCOLATEEN_PASSWORD}
       - USER_VAUGIE_G_PASSWORD=${USER_VAUGIE_G_PASSWORD}
