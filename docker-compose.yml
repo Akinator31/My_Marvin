@@ -3,7 +3,10 @@ services:
   jenkins:
     build: .
     environment:
-      - PASSWORD=${Jigglypuff_PASSWORD}
+      - USER_CHOCOLATEEN_PASSWORD=${USER_CHOCOLATEEN_PASSWORD}
+      - USER_VAUGIE_G_PASSWOR=${USER_VAUGIE_G_PASSWORD}
+      - USER_I_DONT_KNOW_PASSWORD=${USER_I_DONT_KNOW_PASSWORD}
+      - USER_NASSO_PASSWORD=${USER_NASSO_PASSWORD}
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/my_marvin.yml
     volumes:
       - ./my_marvin.yml:/var/jenkins_home/casc_configs/my_marvin.yml
