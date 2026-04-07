@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: "Hello! Welcome to my Jenkins instance :)"
+  systemMessage: "Welcome to the Chocolatine-Powered Marvin Jenkins Instance."
   securityRealm:
     local:
       allowsSignup: false
