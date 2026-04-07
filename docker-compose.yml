@@ -4,8 +4,8 @@ services:
     build: .
     environment:
       - PASSWORD=${Jigglypuff_PASSWORD}
-      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/configuration.yml
+      - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/my_marvin.yml
     volumes:
-      - ./configuration.yml:/var/jenkins_home/casc_configs/configuration.yml
+      - ./my_marvin.yml:/var/jenkins_home/casc_configs/my_marvin.yml
       - ./job_dsl.groovy:/var/jenkins_home/job_dsl.groovy
       - /var/run/docker.sock:/var/run/docker.sock
