@@ -20,5 +20,45 @@ jenkins:
           password: ${USER_NASSO_PASSWORD}
           name: "Nassim"
 
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "admin"
+            description: "Marvin master"
+            permissions:
+              - "Overall/Administer"
+            entries:
+              - user: "chocolateen"
+
+          - name: "ape"
+            description: "Pedagogical team member"
+            permissions:
+              - "Job/Build"
+              - "Job/Workspace"
+            entries:
+              - user: "i_dont_know"
+
+          - name: "gorilla"
+            description: "Group Obsessively Researching Innovation Linked to Learning and Accomplishment"
+            permissions:
+              - "Job/Build"
+              - "Job/Workspace"
+              - "Job/Create"
+              - "Job/Configure"
+              - "Job/Delete"
+              - "Job/Move"
+              - "Job/Cancel"
+            entries:
+              - user: "vaugie_g"
+
+          - name: "assist"
+            description: "Assistant"
+            permissions:
+              - "Job/Read"
+              - "Job/Workspace"
+            entries:
+              - user: "nasso"
+
 jobs:
   - file: /var/jenkins_home/job_dsl.groovy
