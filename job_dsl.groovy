@@ -14,3 +14,7 @@ job('Daily Dose of Satisfaction') {
         shell('echo "This is your DDoS number ${BUILD_NUMBER}."')
     }
 }
+
+folder('Tools') {
+    description('Folder for miscellaneous tools.')
+}
