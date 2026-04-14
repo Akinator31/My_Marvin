@@ -27,7 +27,7 @@ job('Tools/SEED') {
                     scm {
                         git {
                             remote {
-                                github('$GITHUB_NAME')
+                                github("$GITHUB_NAME")
                             }
                         }
                     }

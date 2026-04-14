@@ -65,3 +65,7 @@ jenkins:
 
 jobs:
   - file: /var/jenkins_home/job_dsl.groovy
+
+security:
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: false
