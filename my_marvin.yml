@@ -37,6 +37,7 @@ jenkins:
               - "Overall/Read"
               - "Job/Build"
               - "Job/Workspace"
+              - "Job/Read""
             entries:
               - user: "i_dont_know"
 
@@ -51,6 +52,7 @@ jenkins:
               - "Job/Delete"
               - "Job/Move"
               - "Job/Cancel"
+              - "Job/Read"
             entries:
               - user: "vaugie_g"
 
