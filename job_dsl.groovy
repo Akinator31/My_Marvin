@@ -22,8 +22,7 @@ job('Tools/SEED') {
 
     steps {
         dsl {
-            text('''
-                job('$DISPLAY_NAME') {
+            text('''job("$DISPLAY_NAME") {
                     scm {
                         git {
                             remote {
@@ -43,8 +42,7 @@ job('Tools/SEED') {
                         shell('make tests_run')
                         shell('make clean')
                     }
-                }
-            ''')
+                }''')
         }
     }
 }
